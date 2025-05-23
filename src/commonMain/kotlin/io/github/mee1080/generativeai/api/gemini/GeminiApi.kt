@@ -23,8 +23,8 @@ private const val LOGGING = false
 private const val URL_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 
 enum class GeminiModel(val modelName: String) {
-    GeminiPro15("gemini-1.5-pro-latest"),
-    GeminiPro("gemini-pro"),
+    GeminiFlash25("gemini-2.5-flash-preview-05-20"),
+    GeminiFlash20("gemini-2.0-flash"),
     GeminiProVision("gemini-pro-vision");
 }
 
@@ -63,7 +63,7 @@ sealed class GeminiConversationBase(
 
 class GeminiTextConversation(
     apiKey: String,
-    model: GeminiModel = GeminiModel.GeminiPro,
+    model: GeminiModel = GeminiModel.GeminiFlash20,
 ) : GeminiConversationBase(model, apiKey) {
 
     private val _history: MutableList<Content> = mutableListOf()

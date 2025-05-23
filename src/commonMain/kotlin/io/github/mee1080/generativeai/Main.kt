@@ -42,7 +42,7 @@ suspend fun openRouterTextConversation() {
 }
 
 suspend fun textConversation1() {
-    GeminiTextConversation(GEMINI_KEY, GeminiModel.GeminiPro15).use { conversation ->
+    GeminiTextConversation(GEMINI_KEY, GeminiModel.GeminiFlash20).use { conversation ->
         HarmCategory.entries.forEach { conversation.safetySettings[it] = HarmBlockThreshold.BLOCK_NONE }
         val text1 = "適当な論理パズルを作ってください。"
         println(conversation.countTokens(text1))
@@ -55,7 +55,7 @@ suspend fun textConversation1() {
 }
 
 suspend fun textConversationLib() {
-    val chat = GenerativeModel(GeminiModel.GeminiPro.modelName, GEMINI_KEY).startChat()
+    val chat = GenerativeModel(GeminiModel.GeminiFlash20.modelName, GEMINI_KEY).startChat()
     val text1 = "適当な論理パズルを作ってください。"
     chat.sendMessage(text1)
     val text2 = "その論理パズルの解答を、ステップバイステップで教えてください。"

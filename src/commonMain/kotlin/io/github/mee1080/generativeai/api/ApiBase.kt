@@ -31,6 +31,7 @@ abstract class ApiBase(logging: Boolean = false) : AutoCloseable {
             json(Json {
                 explicitNulls = false
                 isLenient = true
+                ignoreUnknownKeys = true
             })
         }
         configureClient()

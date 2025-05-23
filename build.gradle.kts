@@ -13,21 +13,19 @@ repositories {
 }
 
 kotlin {
-    jvm {
-        compilations.all {
-            kotlinOptions.jvmTarget = libs.versions.jvmTarget.get()
-        }
-    }
+    jvmToolchain(libs.versions.jvmTarget.get().toInt())
+
+    jvm()
 
     sourceSets {
         val commonMain by getting {
             dependencies {
                 implementation(libs.kotlinx.coroutinesCore)
-                implementation(libs.ktor.client.core)
-                implementation(libs.ktor.client.cio)
-                implementation(libs.ktor.client.contentNegotiation)
-                implementation(libs.ktor.client.logging)
-                implementation(libs.ktor.serializationJson)
+                implementation(libs.ktor.clientCore)
+                implementation(libs.ktor.clientCio)
+                implementation(libs.ktor.clientContentNegotiation)
+                implementation(libs.ktor.clientLogging)
+                implementation(libs.ktor.serializationKotlinxJson)
                 implementation(libs.generativeAi)
                 runtimeOnly(libs.slf4j.nop)
             }
