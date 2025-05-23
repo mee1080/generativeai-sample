@@ -27,6 +27,7 @@ kotlin {
                 implementation(libs.ktor.clientLogging)
                 implementation(libs.ktor.serializationKotlinxJson)
                 implementation(libs.generativeAi)
+                implementation(libs.koog.agents)
                 runtimeOnly(libs.slf4j.nop)
             }
         }
@@ -41,5 +42,6 @@ buildkonfig {
     defaultConfigs {
         buildConfigField(FieldSpec.Type.STRING, "GEMINI_API_KEY", localProperties["gemini_api_key"]?.toString() ?: "")
         buildConfigField(FieldSpec.Type.STRING, "OPEN_ROUTER_KEY", localProperties["open_router_key"]?.toString() ?: "")
+        buildConfigField(FieldSpec.Type.STRING, "MCP_FIRST_JAR", localProperties["mcp_first_jar"]?.toString() ?: "")
     }
 }
