@@ -5,7 +5,7 @@ konfig = "0.15.1"
 koog = "0.1.0"
 
 burst = "2.5.0"
-compose = "1.8.0"
+compose = "1.8.1"
 compose-hotReload = "1.0.0-alpha10"
 compose-lazyLayouts = "0.3.0"
 compose-stylesheet = "0.0.3"
