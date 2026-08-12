@@ -6,7 +6,7 @@ koog = "0.2.1"
 
 burst = "2.5.0"
 compose = "1.8.1"
-compose-hotReload = "1.0.0-alpha10"
+compose-hotReload = "1.2.0"
 compose-lazyLayouts = "0.3.0"
 compose-stylesheet = "0.0.3"
 exposed = "0.61.0"
